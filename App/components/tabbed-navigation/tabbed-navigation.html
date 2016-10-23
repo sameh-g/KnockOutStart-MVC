@@ -1,0 +1,10 @@
+﻿<ul id="tabHeader" class="nav nav-tabs" role="tablist">
+    <!-- ko foreach: tabs -->
+    <li data-bind="css : {active : isSelected }">
+        <a data-bind="text : text, attr : { href: url }"></a>
+    </li>
+    <!-- /ko -->
+</ul>
+
+<div id="tabPanel" 
+     data-bind="component: {name: selected().component, params: {name: selected().text }}"></div>
